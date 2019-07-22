@@ -1,6 +1,6 @@
 {
   "name": "vue-jest-extended",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Jest helper matchers compatible with Vue-Test-Utils",
   "main": "./lib/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "cover": "nyc --check-coverage yarn test:only",
     "lint": "eslint src test",
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
-    "prepublish": "yarn clean && yarn lint && yarn test && yarn build"
+    "prepare": "yarn clean && yarn lint && yarn test && yarn build"
   },
   "files": [
     "lib",
