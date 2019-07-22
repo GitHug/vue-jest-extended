@@ -1,9 +1,12 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
-  "env": {
-    "mocha": true
-  },
+  "extends": [
+    "plugin:jest/recommended",
+    "airbnb/base"
+  ],
+  "plugins": [
+    "jest"
+  ],
   "rules": {
     "comma-dangle": ["error", "only-multiline"]
   }

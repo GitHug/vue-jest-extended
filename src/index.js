@@ -1,10 +1,49 @@
-const defaultAwesomeFunction = (name) => {
-  const returnStr = `I am the Default Awesome Function, fellow comrade! - ${name}`;
-  return returnStr;
-};
+const jestExpect = global.expect;
 
-const awesomeFunction = () => 'I am just an Awesome Function';
+jestExpect.extend({
+  toHaveEmitted(wrapper, event) {
+    const [[wrapperEvent]] = wrapper.emitted(event) || [[]];
 
-export default defaultAwesomeFunction;
+    const emitted = Object.entries(wrapper.emitted())
+      .reduce((acc, [key, [value]]) => Object.assign(acc, { [key]: value }), {});
 
-export { awesomeFunction };
+    const message = wrapperEvent
+      ? () => `${this.utils.matcherHint('.not.toHaveEmitted')}\n\n
+        Expected wrapper not to have emitted:\n
+          ${this.utils.printExpected(event)}
+        Received:\n
+          ${this.utils.printReceived(emitted)}
+        `
+      : () => `${this.utils.matcherHint('.toHaveEmitted')}\n\n
+        Expected wrapper to have emitted:\n
+          ${this.utils.printExpected(event)}
+        Received:\n
+          ${this.utils.printReceived(emitted)}
+        `;
+    return { actual: wrapperEvent, message, pass: !!wrapperEvent };
+  },
+
+  toHaveEmittedPayload(wrapper, event, payload) {
+    const [[wrapperEvent]] = wrapper.emitted(event) || [[]];
+
+    const emitted = Object.entries(wrapper.emitted())
+      .reduce((acc, [key, [value]]) => Object.assign(acc, { [key]: value }), {});
+
+    const pass = JSON.stringify(wrapperEvent) === JSON.stringify(payload);
+
+    const message = pass
+      ? () => `${this.utils.matcherHint('.not.toHaveEmitted')}\n\n
+        Expected wrapper not to have emitted:\n
+          ${this.utils.printExpected({ [event]: [{ ...payload }] })}
+        Received:\n
+          ${this.utils.printReceived(emitted)}
+        `
+      : () => `${this.utils.matcherHint('.toHaveEmitted')}\n\n
+        Expected wrapper to have emitted:\n
+          ${this.utils.printExpected({ [event]: [{ ...payload }] })}
+        Received:\n
+          ${this.utils.printReceived(emitted)}
+        `;
+    return { actual: wrapperEvent, message, pass };
+  }
+});

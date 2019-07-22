@@ -1,15 +1,27 @@
 {
   "env": {
     "development": {
-      "presets": ["env"],
+      "presets": [
+        "@babel/preset-env"
+      ],
       "plugins": [
-        "add-module-exports"
+        "add-module-exports",
+        "@babel/plugin-transform-modules-commonjs"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs"
       ]
     },
     "production": {
-      "presets": ["env", "minify"],
+      "presets": [
+        "@babel/preset-env",
+        "minify"
+      ],
       "plugins": [
-        "add-module-exports"
+        "add-module-exports",
+        "@babel/plugin-proposal-object-rest-spread"
       ]
     }
   }
