@@ -9,7 +9,6 @@
     "test:prod": "cross-env BABEL_ENV=production yarn test",
     "test:only": "NODE_ENV=test jest --no-cache",
     "test:watch": "yarn test --watch",
-    "test:examples": "node examples/",
     "cover": "nyc --check-coverage yarn test:only",
     "lint": "eslint src test",
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
