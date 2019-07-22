@@ -27,7 +27,8 @@
     "extend",
     "extended",
     "vue",
-    "vue-test-utils"
+		"vue-test-utils",
+		"matchers"
   ],
   "author": {
     "name": "Fredrik Mäkilä",
