@@ -1,6 +1,6 @@
 # Vue Jest Extended
 
-[![Build Status](https://travis-ci.org/flexdinesh/vue-jest-extended.svg?branch=master)](https://travis-ci.org/flexdinesh/vue-jest-extended) [![dependencies Status](https://david-dm.org/githug/vue-jest-extended/status.svg)](https://david-dm.org/githug/vue-jest-extended) [![devDependencies Status](https://david-dm.org/githug/vue-jest-extended/dev-status.svg)](https://david-dm.org/githug/vue-jest-extended?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/githug/vue-jest-extended.svg?branch=master)](https://travis-ci.org/githug/vue-jest-extended) [![dependencies Status](https://david-dm.org/githug/vue-jest-extended/status.svg)](https://david-dm.org/githug/vue-jest-extended) [![devDependencies Status](https://david-dm.org/githug/vue-jest-extended/dev-status.svg)](https://david-dm.org/githug/vue-jest-extended?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **Jest extensions compatible with Vue Test Utils** ✨
 
