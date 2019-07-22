@@ -1,6 +1,6 @@
 {
   "name": "vue-jest-extended",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Jest helper matchers compatible with Vue-Test-Utils",
   "main": "./lib/index.js",
   "scripts": {
@@ -27,8 +27,8 @@
     "extend",
     "extended",
     "vue",
-		"vue-test-utils",
-		"matchers"
+    "vue-test-utils",
+    "matchers"
   ],
   "author": {
     "name": "Fredrik Mäkilä",
