@@ -20,5 +20,46 @@
 - `npm run build` - Babel will transpile ES6 => ES5 and minify the code.
 - `npm run prepare` - Hook for npm. Do all the checks before publishing your module.
 
+# Install
+```
+yarn add -D vue-jest-extended
+```
+# Setup
+In your jest configuration:
+
+## From Jest v24
+```
+"jest": {
+  ...
+   "setupFilesAfterEnv": ["vue-jest-extended"]
+  ...
+}
+```
+
+## Jest v23 or previous
+```
+"jest": {
+  ...
+  "setupTestFrameworkScriptFile": "vue-jest-extended"
+  ...
+}
+```
+
+alternatively if you want to combine these matchers with other matchers in your project
+```
+"jest": {
+  ...
+  "setupTestFrameworkScriptFile": "./extensions.js"
+  ...
+}
+```
+```
+/* extensions.js */
+
+import 'vue-jest-extended;
+// require('vue-jest-extended);
+```
+
+
 # License
 MIT

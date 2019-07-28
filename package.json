@@ -66,5 +66,9 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     }
+  },
+  "dependencies": {
+    "expect": "^24.8.0",
+    "jest-matcher-utils": "^24.8.0"
   }
 }

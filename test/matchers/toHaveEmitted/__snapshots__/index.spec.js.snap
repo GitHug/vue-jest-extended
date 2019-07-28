@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.toHaveEmitted fails when the expected event  has not been emitted by the wrapper 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32m[][39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event [object Object] has not been emitted by the wrapper 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32m{}[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event NaN has not been emitted by the wrapper 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32mNaN[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event change has been emitted by the wrapper but the payload {"test":{"data":[{}]}} has not been emitted 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32m\\"change\\"[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event input has been emitted by the wrapper but the payload {"test":"data"} has not been emitted 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32m\\"input\\"[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event keyDown has not been emitted by the wrapper 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32m\\"keyDown\\"[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event null has not been emitted by the wrapper 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32mnull[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
+
+exports[`.toHaveEmitted fails when the expected event undefined has not been emitted by the wrapper 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper  to have emitted:
+
+    [32mundefined[39m
+
+  received:
+    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+  "
+`;
