@@ -1,18 +1,13 @@
 {
   "name": "vue-jest-extended",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Jest helper matchers compatible with Vue-Test-Utils",
-  "main": "./lib/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
-    "test": "yarn lint && yarn cover",
-    "test:prod": "cross-env BABEL_ENV=production yarn test",
-    "test:only": "NODE_ENV=test jest --no-cache",
-    "test:watch": "yarn test --watch",
-    "cover": "nyc --check-coverage yarn test:only",
-    "lint": "eslint src test",
-    "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
-    "prepare": "yarn clean && yarn lint && yarn test && yarn build"
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "yarn build",
+    "test": "jest"
   },
   "files": [
     "lib",
