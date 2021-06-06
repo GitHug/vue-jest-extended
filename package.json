@@ -1,9 +1,9 @@
 {
   "name": "vue-jest-extended",
-  "version": "1.0.1-rc",
+  "version": "1.0.2-rc",
   "description": "Jest helper matchers compatible with Vue-Test-Utils",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepublishOnly": "yarn build",
@@ -12,8 +12,9 @@
   },
   "files": [
     "lib",
-    "jest.d.ts",
-    "index.d.ts"
+    "README.md",
+    "LICENSE",
+    "types/index.d.ts"
   ],
   "repository": {
     "type": "git",
