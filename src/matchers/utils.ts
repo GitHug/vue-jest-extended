@@ -3,7 +3,7 @@ import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils';
 export default (matcher: string, messageCB: (arg: string) => string) => {
   const passMessage = (actual: any, expected: any) => () =>
     `
-  ${matcherHint(`not.${matcher}`)}\n\n
+  ${matcherHint(`.not.${matcher}`)}\n\n
   ${messageCB('not')}\n
     ${printExpected(expected)}\n
   received:

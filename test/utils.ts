@@ -1,5 +1,6 @@
 export default class FakeWrapper {
   events!: { [name: string]: Array<Array<any>> };
+  public existing = false;
 
   constructor() {
     this.events = {};
@@ -21,5 +22,9 @@ export default class FakeWrapper {
     }
 
     return this.events;
+  }
+
+  exists() {
+    return this.existing;
   }
 }

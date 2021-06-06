@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`.toHaveEmitted fails when the expected event  has not been emitted by the wrapper 1`] = `
+exports[`.toHaveEmitted fails when the expected event [] has not been emitted by the wrapper 1`] = `
 "
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
@@ -14,7 +14,7 @@ exports[`.toHaveEmitted fails when the expected event  has not been emitted by t
   "
 `;
 
-exports[`.toHaveEmitted fails when the expected event [object Object] has not been emitted by the wrapper 1`] = `
+exports[`.toHaveEmitted fails when the expected event {} has not been emitted by the wrapper 1`] = `
 "
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
@@ -42,7 +42,7 @@ exports[`.toHaveEmitted fails when the expected event NaN has not been emitted b
   "
 `;
 
-exports[`.toHaveEmitted fails when the expected event change has been emitted by the wrapper but the payload {"test":{"data":[{}]}} has not been emitted 1`] = `
+exports[`.toHaveEmitted fails when the expected event change and payload { test: { data: [ {}, [length]: 1 ] } } combination has not been emitted 1`] = `
 "
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
@@ -52,11 +52,11 @@ exports[`.toHaveEmitted fails when the expected event change has been emitted by
     [32m{\\"change\\": {\\"test\\": {\\"data\\": [{}]}}}[39m
 
   received:
-    [31m{\\"test\\": {\\"data\\": {\\"events\\": {}}}}[39m
+    [31m{\\"test\\": {\\"data\\": {\\"foo\\": \\"bar\\"}}}[39m
   "
 `;
 
-exports[`.toHaveEmitted fails when the expected event input has been emitted by the wrapper but the payload {"test":"data"} has not been emitted 1`] = `
+exports[`.toHaveEmitted fails when the expected event input and payload { test: 'data' } combination has not been emitted 1`] = `
 "
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 

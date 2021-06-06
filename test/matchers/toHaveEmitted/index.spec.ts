@@ -1,12 +1,16 @@
 import FakeWrapper from '../../utils';
-import matcher from '../../../src/matchers/toHaveEmitted/index';
+import matcher from '../../../src/matchers/toHaveEmitted';
 
 expect.extend(matcher);
+
+class Dummy {
+  foo = 'bar';
+}
 
 describe('.toHaveEmitted', () => {
   const wrapper = new FakeWrapper();
   wrapper.emit('input', { data: 'test' });
-  wrapper.emit('change', { test: { data: new FakeWrapper() } });
+  wrapper.emit('change', { test: { data: new Dummy() } });
   wrapper.emit('keyUp');
 
   test('that toHaveEmittedPayload is an alias for toHaveEmitted', () => {
@@ -14,50 +18,41 @@ describe('.toHaveEmitted', () => {
   });
 
   describe('passes when', () => {
-    const testCases = ['input', 'change', 'keyUp'];
-    const testCasesWithPayload = [
-      { event: 'input', payload: { data: 'test' } },
-      { event: 'change', payload: { test: { data: new FakeWrapper() } } },
-    ];
-
-    testCases.forEach((event) => {
-      test(`the expected event ${event} matches one emitted by the wrapper`, () => {
+    test.each(['input', 'change', 'keyUp'])(
+      'the expected event %s matches one emitted by the wrapper',
+      (event: string) => {
         expect(wrapper).toHaveEmitted(event);
-      });
-    });
+      },
+    );
 
-    testCasesWithPayload.forEach(({ event, payload }) => {
-      test(`the expected event ${event} matches one emitted by the wrapper including its payload ${JSON.stringify(
-        payload,
-      )}`, () => {
+    test.each([
+      ['input', { data: 'test' }],
+      ['change', { test: { data: new Dummy() } }],
+    ])(
+      'the expected event %s and the expected payload %o matches event and payload emitted',
+      (event: string, payload: any) => {
         expect(wrapper).toHaveEmitted(event, payload);
-      });
-    });
+      },
+    );
   });
 
   describe('fails when', () => {
-    const testCases = [undefined, null, NaN, [], {}, 'keyDown'];
-    const testCasesWithPayload = [
-      { event: 'input', payload: { test: 'data' } },
-      { event: 'change', payload: { test: { data: [{}] } } },
-    ];
-
-    testCases.forEach((event) => {
-      test(`the expected event ${event} has not been emitted by the wrapper`, () => {
+    test.each([undefined, null, NaN, [], {}, 'keyDown'])(
+      'the expected event %s has not been emitted by the wrapper',
+      (event: any) => {
         expect(() => {
-          expect(wrapper).toHaveEmitted(event as any);
+          expect(wrapper).toHaveEmitted(event);
         }).toThrowErrorMatchingSnapshot();
-      });
-    });
+      },
+    );
 
-    testCasesWithPayload.forEach(({ event, payload }) => {
-      test(`the expected event ${event} has been emitted by the wrapper but the payload ${JSON.stringify(
-        payload,
-      )} has not been emitted`, () => {
-        expect(() => {
-          expect(wrapper).toHaveEmitted(event, payload);
-        }).toThrowErrorMatchingSnapshot();
-      });
+    test.each([
+      ['input', { test: 'data' }],
+      ['change', { test: { data: [{}] } }],
+    ])('the expected event %s and payload %o combination has not been emitted', (event: string, payload: any) => {
+      expect(() => {
+        expect(wrapper).toHaveEmitted(event, payload);
+      }).toThrowErrorMatchingSnapshot();
     });
   });
 });
