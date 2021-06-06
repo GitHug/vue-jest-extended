@@ -10,6 +10,8 @@
 
 * `.toHaveEmitted` - Check if a @vue/test-utils wrapper has emitted the given event
 * `.toHaveEmittedPayload` - Check if a @vue/test-utils has emitted an event with the given payload
+* `.toExist` - Pass if wrapper exists
+* `.toBeVisible` - Pass if wrapper is not visible
 # Install
 ```
 yarn add -D vue-jest-extended
