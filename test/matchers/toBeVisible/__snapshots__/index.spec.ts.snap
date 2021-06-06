@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.toBeVisible .not.toBeVisible fails when wrapper exists 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).not.toBeVisible([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper not to be visible:
+
+    [32mfalse[39m
+
+  received:
+    [31mtrue[39m
+  "
+`;
+
+exports[`.toBeVisible fails when wrapper is not visible 1`] = `
+"
+  [2mexpect([22m[31mreceived[39m[2m).toBeVisible([22m[32mexpected[39m[2m)[22m
+
+
+  Expected wrapper to be visible:
+
+    [32mtrue[39m
+
+  received:
+    [31mfalse[39m
+  "
+`;

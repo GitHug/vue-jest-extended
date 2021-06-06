@@ -6,5 +6,6 @@ declare namespace jest {
     toHaveEmittedPayload(event: string, payload: any): R;
 
     toExist(): R;
+    toBeVisible(): R;
   }
 }
