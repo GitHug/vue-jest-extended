@@ -1,6 +1,6 @@
 {
   "name": "vue-jest-extended",
-  "version": "1.0.2-rc",
+  "version": "1.0.0",
   "description": "Jest helper matchers compatible with Vue-Test-Utils",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
