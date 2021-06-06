@@ -18,7 +18,8 @@
   "include": [
     "./src/**/*", 
     "global.d.ts",
-    "jest.d.ts"
+    "jest.d.ts",
+    "index.d.ts"
   ],
-  "exclude": ["node_modules", "lib"]
+  "exclude": ["node_modules", "lib", "index.d.ts"]
 }
