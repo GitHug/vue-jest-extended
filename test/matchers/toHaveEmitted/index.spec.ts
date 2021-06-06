@@ -17,7 +17,7 @@ describe('.toHaveEmitted', () => {
     const testCases = ['input', 'change', 'keyUp'];
     const testCasesWithPayload = [
       { event: 'input', payload: { data: 'test' } },
-      { event: 'change', payload: { test: { data: new FakeWrapper() } } }
+      { event: 'change', payload: { test: { data: new FakeWrapper() } } },
     ];
 
     testCases.forEach((event) => {
@@ -27,7 +27,9 @@ describe('.toHaveEmitted', () => {
     });
 
     testCasesWithPayload.forEach(({ event, payload }) => {
-      test(`the expected event ${event} matches one emitted by the wrapper including its payload ${JSON.stringify(payload)}`, () => {
+      test(`the expected event ${event} matches one emitted by the wrapper including its payload ${JSON.stringify(
+        payload,
+      )}`, () => {
         expect(wrapper).toHaveEmitted(event, payload);
       });
     });
@@ -37,19 +39,21 @@ describe('.toHaveEmitted', () => {
     const testCases = [undefined, null, NaN, [], {}, 'keyDown'];
     const testCasesWithPayload = [
       { event: 'input', payload: { test: 'data' } },
-      { event: 'change', payload: { test: { data: [{}] } } }
+      { event: 'change', payload: { test: { data: [{}] } } },
     ];
 
     testCases.forEach((event) => {
       test(`the expected event ${event} has not been emitted by the wrapper`, () => {
         expect(() => {
-          expect(wrapper).toHaveEmitted(event);
+          expect(wrapper).toHaveEmitted(event as any);
         }).toThrowErrorMatchingSnapshot();
       });
     });
 
     testCasesWithPayload.forEach(({ event, payload }) => {
-      test(`the expected event ${event} has been emitted by the wrapper but the payload ${JSON.stringify(payload)} has not been emitted`, () => {
+      test(`the expected event ${event} has been emitted by the wrapper but the payload ${JSON.stringify(
+        payload,
+      )} has not been emitted`, () => {
         expect(() => {
           expect(wrapper).toHaveEmitted(event, payload);
         }).toThrowErrorMatchingSnapshot();

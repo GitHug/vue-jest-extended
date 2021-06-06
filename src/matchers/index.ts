@@ -1,9 +1,9 @@
 import toHaveEmitted from './toHaveEmitted';
 
-const imports = {
-  toHaveEmitted
+const imports: { [key: string]: any } = {
+  toHaveEmitted,
 };
 
 export default Object.keys(imports)
-  .map(key => imports[key])
+  .map((key) => imports[key])
   .reduce((acc, matcher) => ({ ...acc, ...matcher }), {});

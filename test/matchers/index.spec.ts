@@ -6,9 +6,9 @@ expect.extend(matchers);
 describe('matchers', () => {
   test('toHaveEmitted matcher', () => {
     const wrapper = new FakeWrapper();
-    wrapper.emit('input');
+    wrapper.emit('input', {});
 
     expect(wrapper).toHaveEmitted('input');
-    expect(wrapper).toHaveEmittedPayload('input');
+    expect(wrapper).toHaveEmittedPayload('input', {});
   });
 });

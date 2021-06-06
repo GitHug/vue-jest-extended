@@ -5,12 +5,12 @@ exports[`.toHaveEmitted fails when the expected event  has not been emitted by t
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
     [32m[][39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m\\"input, change, keyUp\\"[39m
   "
 `;
 
@@ -19,12 +19,12 @@ exports[`.toHaveEmitted fails when the expected event [object Object] has not be
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
     [32m{}[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m\\"input, change, keyUp\\"[39m
   "
 `;
 
@@ -33,12 +33,12 @@ exports[`.toHaveEmitted fails when the expected event NaN has not been emitted b
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
     [32mNaN[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m\\"input, change, keyUp\\"[39m
   "
 `;
 
@@ -47,12 +47,12 @@ exports[`.toHaveEmitted fails when the expected event change has been emitted by
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
-    [32m\\"change\\"[39m
+    [32m{\\"change\\": {\\"test\\": {\\"data\\": [{}]}}}[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m{\\"test\\": {\\"data\\": {\\"events\\": {}}}}[39m
   "
 `;
 
@@ -61,12 +61,12 @@ exports[`.toHaveEmitted fails when the expected event input has been emitted by 
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
-    [32m\\"input\\"[39m
+    [32m{\\"input\\": {\\"test\\": \\"data\\"}}[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m{\\"data\\": \\"test\\"}[39m
   "
 `;
 
@@ -75,12 +75,12 @@ exports[`.toHaveEmitted fails when the expected event keyDown has not been emitt
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
     [32m\\"keyDown\\"[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m\\"input, change, keyUp\\"[39m
   "
 `;
 
@@ -89,12 +89,12 @@ exports[`.toHaveEmitted fails when the expected event null has not been emitted 
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
     [32mnull[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m\\"input, change, keyUp\\"[39m
   "
 `;
 
@@ -103,11 +103,11 @@ exports[`.toHaveEmitted fails when the expected event undefined has not been emi
   [2mexpect([22m[31mreceived[39m[2m).toHaveEmitted([22m[32mexpected[39m[2m)[22m
 
 
-  Expected wrapper  to have emitted:
+  Expected wrapper to have emitted:
 
     [32mundefined[39m
 
   received:
-    [31m{\\"events\\": {\\"change\\": [[{\\"test\\": {\\"data\\": {\\"events\\": {}}}}]], \\"input\\": [[{\\"data\\": \\"test\\"}]], \\"keyUp\\": [[undefined]]}}[39m
+    [31m\\"input, change, keyUp\\"[39m
   "
 `;

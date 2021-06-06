@@ -12,10 +12,13 @@
     "skipLibCheck": true,
     "paths": {
       "root/*": ["./*"]
-    }
+    },
+    "types": ["node", "jest"]
   },
   "include": [
-    "./src/**/*",
+    "./src/**/*", 
+    "global.d.ts",
+    "jest.d.ts"
   ],
-  "exclude": ["node_modules", "example/node_modules", "lib"]
+  "exclude": ["node_modules", "lib"]
 }
